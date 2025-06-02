@@ -62,6 +62,8 @@
 
 .sidebar__right {
   margin-bottom: 1em;
+   word-break: break-word;
+  overflow-wrap: break-word;
 
   @include breakpoint($large) {
     position: relative;
@@ -86,6 +88,8 @@
   width: 36px;
   // set width only, for non-square avatars
   // height: 36px;
+   word-break: break-word;
+  overflow-wrap: break-word;
 
   @include breakpoint($large) {
     display: block;
@@ -169,6 +173,8 @@
   z-index: 10;
   position: relative;
   cursor: pointer;
+   word-break: break-word;
+  overflow-wrap: break-word;
 
   li:last-child {
     a {
