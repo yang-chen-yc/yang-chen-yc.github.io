@@ -6,6 +6,12 @@
    Default
    ========================================================================== */
 
+.sidebar li {
+  white-space: normal !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 .sidebar {
   -webkit-transform: translate3d(0, 0 , 0);
           transform: translate3d(0, 0 , 0);
@@ -53,6 +59,8 @@
     font-family: $sans-serif;
     font-size: $type-size-6;
     line-height: 1.5;
+     word-break: break-word;
+  overflow-wrap: break-word;
   }
 
   img {
