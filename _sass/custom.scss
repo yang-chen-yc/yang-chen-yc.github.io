@@ -1,0 +1,10 @@
+/* 调整侧边栏宽度和内边距 */
+.sidebar {
+  width: 300px;  // 适当增加宽度
+  padding-left: 1.5rem !important;  // 增加左侧内边距
+}
+/* 确保文本换行 */
+.sidebar__bio p, .sidebar__bio li {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
