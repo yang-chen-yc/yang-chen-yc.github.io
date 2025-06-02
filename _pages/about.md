@@ -10,6 +10,6 @@ redirect_from:
 
 About me 
 -------------
-Hello! I am a third-yea PhD student in Economics at the [University of Lausanne (HEC Lausanne)](https://www.unil.ch/de/en/home.html), under the supervision of Prof. [Bettina KLAUS](https://www.bklaus.net/).
+Hello! I am a third-yea PhD student in Economics at the [Department of Economics, HEC Lausanne](https://www.unil.ch/de/en/home.html), University of Lausanne, under the supervision of Prof. [Bettina KLAUS](https://www.bklaus.net/).
 
 My research interests focus on matching theory, fair allocation, market design.
