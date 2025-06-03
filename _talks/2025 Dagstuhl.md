@@ -4,6 +4,6 @@ collection: talks
 type: "*Conference*"
 # permalink: "https://website-50514.eventmaker.io/en"
 venue: "Schloss Dagstuhl - Leibniz-Zentrum für Informatik GmbH"
-date: "09-14 February 2025"
+date: "09 &hyphen 14 February 2025"
 location: "Dagstuhl, Germany"
 ---
