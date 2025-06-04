@@ -1,5 +1,5 @@
 ---
-title: "**GAIMSS24**. Games and Artificial Intelligence Multidisciplinary Summer School 2024. [Website](https://sites.google.com/view/gaimss24/home)"
+title: "[**GAIMSS24**. Games and Artificial Intelligence Multidisciplinary Summer School 2024].(https://sites.google.com/view/gaimss24/home)"
 collection: talks
 type: "*Summer school*"
 # permalink: "https://website-50514.eventmaker.io/en"
