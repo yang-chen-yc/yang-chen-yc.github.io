@@ -4,7 +4,7 @@ collection: talks
 type: "*Summer school*"
 # permalink: "https://website-50514.eventmaker.io/en"
 venue: "Study Center Gerzensee"
-# date: "29 July &hyphon 02 August 2024"
+date: "29 July 2024"
 date_start: "29 July 2024"
 date_end: "02 August 2024"
 location: "Gerzensee, Switzerland"
