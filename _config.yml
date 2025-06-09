@@ -226,7 +226,7 @@ collections:
   conferences:
     output: true
     permalink: /:collection/:path/
-  advancedcourses:
+  courses:
     output: true
     permalink: /:collection/:path/
 
