@@ -43,7 +43,7 @@ layout: archive
         {% if course.venue or course.location %}
           <div class="course-location">
             {% if course.venue %}{{ course.venue }}{% endif %}
-            {% if course.location %}{% if course.venue %}, {% endif %}{{ course.location }}{% endif %}
+            {% if course.location %}{% if course.venue %} | {% endif %}{{ course.location }}{% endif %}
           </div>
         {% endif %}
       </div>
