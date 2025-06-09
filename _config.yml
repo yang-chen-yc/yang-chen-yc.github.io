@@ -218,6 +218,9 @@ collections:
   conferences:
     output: true
     permalink: /conferences/:path/
+  courses:
+    output: true
+    permalink: /courses/:path/
 
 
 
