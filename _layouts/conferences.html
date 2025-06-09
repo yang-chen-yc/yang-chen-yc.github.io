@@ -5,7 +5,6 @@ layout: archive
 {{ content }}
 
 <div class="entries-list">
-   {% assign conferences = site.conferences | where: "type", "conference" | sort: "date_start" | reverse %}
   {% for post in site.conferences %}
     <div class="conference-item">
       <h3 class="conference-title">{{ post.title }}</h3>
