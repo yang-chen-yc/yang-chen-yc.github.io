@@ -4,49 +4,52 @@ layout: archive
 
 {{ content }}
 
-{% assign courses_by_year = site.courses | sort: "date_start" | reverse | group_by_exp: "post", "post.date_start | date: '%Y'" %}
-{% for year in courses_by_year %}
-  <h2 class="course-year">{{ year.name }}</h2>
 <div class="entries-list">
-  {% for post in site.courses %}
+  {% assign sorted_courses = site.courses | sort: "date_start" | reverse %}
+  {% for course in sorted_courses %}
     <div class="course-item">
-      <h3 class="course-title">{{ post.title }}</h3>
-      <div class="course-meta">
-  <strong>
-    {% if post.event_url %}
-      <a href="{{ post.event_url }}" target="_blank">{{ post.course }}</a>
-    {% else %}
-      {{ post.course }}
-    {% endif %}
-  </strong>.
-        <!-- Date formatting -->
-        {% if post.date_end == null or post.date_end == post.date_start %}
-          {{ post.date_start | date: "%d %B %Y" }}
+      <!-- Course Title with optional link -->
+      <h3 class="course-title">
+        {% if course.event_url %}
+          <a href="{{ course.event_url }}" target="_blank">{{ course.title }}</a>
         {% else %}
-          {{ post.date_start | date: "%d %B %Y" }} – {{ post.date_end | date: "%d %B %Y" }}
+          {{ course.title }}
         {% endif %}
-
-        {% if post.prof %}
+      </h3>
+      
+      <div class="course-meta">
+        <!-- Dates -->
+        <div class="course-dates">
+          {% if course.date_end == null or course.date_end == course.date_start %}
+            {{ course.date_start | date: "%d %B %Y" }}
+          {% else %}
+            {{ course.date_start | date: "%d %B %Y" }} – {{ course.date_end | date: "%d %B %Y" }}
+          {% endif %}
+        </div>
+        
+        <!-- Professor with link -->
+        {% if course.prof %}
           <div class="course-professor">
-            Professor(s): 
-            {% if post.prof_url %}
-              <a href="{{ post.prof_url }}" target="_blank">{{ post.prof }}</a>
+            Instructor: 
+            {% if course.prof_url %}
+              <a href="{{ course.prof_url }}" target="_blank">{{ course.prof }}</a>
             {% else %}
-              {{ post.prof }}
+              {{ course.prof }}
             {% endif %}
           </div>
         {% endif %}
         
-        <!-- Venue and Location -->
-        {% if post.venue or post.location %}
-          | 
-          {% if post.venue %}{{ post.venue }}{% endif %}
-          {% if post.venue and post.location %} | {% endif %}
-          {% if post.location %}{{ post.location }}{% endif %}
+        <!-- Venue/Location -->
+        {% if course.venue or course.location %}
+          <div class="course-location">
+            {% if course.venue %}{{ course.venue }}{% endif %}
+            {% if course.location %}{% if course.venue %}, {% endif %}{{ course.location }}{% endif %}
+          </div>
         {% endif %}
       </div>
-      {% if post.excerpt %}
-        <div class="course-excerpt">{{ post.excerpt }}</div>
+      
+      {% if course.excerpt %}
+        <div class="course-excerpt">{{ course.excerpt }}</div>
       {% endif %}
     </div>
   {% endfor %}
