@@ -9,7 +9,7 @@ layout: archive
 
 {% for type in paper_types %}
   <!-- Group header (italicized) -->
-  <h2 class="research-type"><em>{{ type }}</em></h2>
+  <h2 class="research-type">{{ type }}</h2>
   
   <!-- Papers in this group -->
   <div class="research-list">
@@ -40,9 +40,9 @@ layout: archive
             {% endif %}
           </div>
           
-          <!-- Optional note -->
+          <!-- Note (italicized) -->
           {% if paper.note %}
-            <div class="research-note">{{ paper.note }}</div>
+            <div class="research-note"><em>{{ paper.note }}</em></div>
           {% endif %}
         </div>
       {% endif %}
