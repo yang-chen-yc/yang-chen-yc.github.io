@@ -1,7 +1,0 @@
-# File: _data/conferences.yml
-- title: "NeurIPS 2023"
-  date_start: 2023-12-10
-  date_end: 2023-12-16
-  location: "New Orleans, USA"
-  url: "https://neurips.cc"
-  notes: "Presented a paper on contrastive learning"
