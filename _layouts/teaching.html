@@ -1,1 +1,54 @@
+---
+layout: archive
+title: "Teaching"
+permalink: /teaching/
+---
 
+{{ content }}
+
+{% assign all_courses = site.teaching | sort: "title" %}
+{% assign course_types = all_courses | map: "type" | uniq | compact %}
+
+{% for type in course_types %}
+  <h2 class="course-type">{{ type }}</h2>
+  
+  <div class="course-list">
+    {% for course in all_courses %}
+      {% if course.type == type %}
+        <div class="course-item">
+          <h3 class="course-title">
+            {% if course.course_url %}
+              <a href="{{ course.course_url }}" target="_blank" rel="noopener noreferrer">{{ course.title }}</a>
+            {% else %}
+              {{ course.title }}
+            {% endif %}
+            {% if course.years %}
+              <span class="course-years">({{ course.years | join: ", " }})</span>
+            {% endif %}
+          </h3>
+
+          <!-- Instructor names (with optional links) -->
+          <div class="course-profs">
+            Instructor(s): 
+            {% if course.profs %}
+              {% for prof in course.profs %}
+                {% if prof.url %}
+                  <a href="{{ prof.url }}" target="_blank" rel="noopener noreferrer">{{ prof.name }}</a>
+                {% else %}
+                  {{ prof.name }}
+                {% endif %}
+                {% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            {% else %}
+              {{ course.prof | default: "Staff" }}
+            {% endif %}
+          </div>
+
+          {% if course.description %}
+            <div class="course-description">{{ course.description }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endfor %}
