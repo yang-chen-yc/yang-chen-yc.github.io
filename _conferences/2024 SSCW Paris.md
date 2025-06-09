@@ -6,6 +6,6 @@ date_end: 2024-07-06                  # Last day
 venue: "Paris School of Economics"       # Venue 
 location: "Paris, France"           # Location
 event_url: https://website-50514.eventmaker.io/en                 # Official website
-event: "Conference"                   # Required for filtering
+type: "conference"                   # Required for filtering
 ---
 
