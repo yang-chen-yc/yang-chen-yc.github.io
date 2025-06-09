@@ -27,8 +27,21 @@ layout: archive
           {% endif %}
         </div>
         
-        <!-- Professor with link -->
-        {% if course.prof %}
+        <!-- Multiple Professors -->
+        {% if course.profs %}
+          <div class="course-professors">
+            Instructor(s): 
+            {% for professor in course.professors %}
+              {% if prof.url %}
+                <a href="{{ prof.url }}" target="_blank">{{ prof.name }}</a>
+              {% else %}
+                {{ prof.name }}
+              {% endif %}
+              {% if prof.affiliation %} ({{ prof.affiliation }}){% endif %}
+              {% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </div>
+        {% elsif course.prof %} <!-- Backward compatibility -->
           <div class="course-professor">
             Instructor: 
             {% if course.prof_url %}
