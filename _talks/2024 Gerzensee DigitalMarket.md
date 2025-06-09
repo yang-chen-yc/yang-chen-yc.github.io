@@ -1,11 +1,10 @@
 ---
-title: "[The Economics of Digital Markets](https://szgerzensee.ch/courses/advanced-courses-in-economics-for-doctoral-students-and-faculty-members/previous-years)"
-collection: talks
-type: "*Summer school*"
-# permalink: "https://website-50514.eventmaker.io/en"
-venue: "Study Center Gerzensee"
-date: 29 July 2024
-date_start: 29 July 2024
-date_end: 02 August 2024
-location: "Gerzensee, Switzerland"
+title: "The Economics of Digital Markets"                     # Conference name
+date_start: 2024-07-29                # First day (YYYY-MM-DD)
+date_end: 2024-08-02                  # Last day
+location: "_Study Center Gerzensee_. Gerzensee, Switzerland"           # Venue
+url: "https://szgerzensee.ch/courses/advanced-courses-in-economics-for-doctoral-students-and-faculty-members/previous-years"                # Official website
+event: "Summer School"                   # Required for filtering
+#talk_type: "Poster"                   # Optional: Poster/Oral/Keynote
+#paper_title: "My Paper on AI Safety"  # Optional
 ---
