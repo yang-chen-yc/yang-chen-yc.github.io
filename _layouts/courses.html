@@ -18,6 +18,20 @@ layout: archive
         {% else %}
           {{ post.date_start | date: "%d %B %Y" }} – {{ post.date_end | date: "%d %B %Y" }}
         {% endif %}
+
+        <!-- Professor line -->
+    {% if post.prof %}
+      <div class="course-professor">
+        Professor(s): 
+        {% if post.prof_url %}
+          <a href="{{ post.prof_url }}" target="_blank">{{ post.prof }}</a>
+        {% else %}
+          {{ post.prof }}
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
         {% if post.venue or post.location %} | 
           {% if post.venue %}{{ post.venue }}{% endif %}
           {% if post.venue and post.location %} | {% endif %}
