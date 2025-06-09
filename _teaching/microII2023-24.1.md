@@ -1,6 +1,6 @@
 ---
 title: "Microeconomics II"
-type: "ta"
+type: "Teaching Assistantship"
 level: "Bachelor"
 years: [2023-2024]
 instructors:
