@@ -4,44 +4,48 @@ layout: archive
 
 {{ content }}
 
-<div class="research-list">
-  {% assign sorted_research = site.research | sort: "year" | reverse %}
-  {% for paper in sorted_research %}
-    <div class="research-item">
-      <!-- 1. Paper Title -->
-      <h3 class="research-title">
-        {% if paper.paper_url %}
-          <a href="{{ paper.paper_url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
-        {% else %}
-          {{ paper.title }}
-        {% endif %}
-      </h3>
-      
-      <!-- 2. Co-authors -->
-      <div class="research-authors">
-        {% if paper.coauthors and paper.coauthors.size > 0 %}
-          {% for author in paper.coauthors %}
-            {% if author.url %}
-              <a href="{{ author.url }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>
+{% assign all_papers = site.research | sort: "year" | reverse %}
+{% assign paper_types = all_papers | map: "type" | uniq | compact %}
+
+{% for type in paper_types %}
+  <!-- Group header (italicized) -->
+  <h2 class="research-type"><em>{{ type }}</em></h2>
+  
+  <!-- Papers in this group -->
+  <div class="research-list">
+    {% for paper in all_papers %}
+      {% if paper.type == type %}
+        <div class="research-item">
+          <!-- Title -->
+          <h3 class="research-title">
+            {% if paper.paper_url %}
+              <a href="{{ paper.paper_url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
             {% else %}
-              {{ author.name }}
+              {{ paper.title }}
             {% endif %}
-            {% unless forloop.last %}, {% endunless %}
-          {% endfor %}
-        {% else %}
-          {{ paper.author | default: "Unknown author" }}
-        {% endif %}
-      </div>
-      
-      <!-- 3. Type (e.g., Journal, Conference, Preprint) -->
-      {% if paper.type %}
-        <div class="research-type"><strong>{{ paper.type }}</strong></div>
+          </h3>
+          
+          <!-- Authors (with "with" prefix) -->
+          <div class="research-authors">
+            {% if paper.coauthors %}
+              with 
+              {% for author in paper.coauthors %}
+                {% if author.url %}
+                  <a href="{{ author.url }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>
+                {% else %}
+                  {{ author.name }}
+                {% endif %}
+                {% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            {% endif %}
+          </div>
+          
+          <!-- Optional note -->
+          {% if paper.note %}
+            <div class="research-note">{{ paper.note }}</div>
+          {% endif %}
+        </div>
       {% endif %}
-      
-      <!-- 4. Note (additional details, e.g., "Selected for Best Paper Award") -->
-      {% if paper.note %}
-        <div class="research-note">{{ paper.note }}</div>
-      {% endif %}
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
+{% endfor %}
