@@ -18,9 +18,9 @@ layout: archive
         {% else %}
           {{ post.date_start | date: "%d %B %Y" }} – {{ post.date_end | date: "%d %B %Y" }}
         {% endif %}
-        {% if post.institution or post.location %} | 
-          {% if post.institution %}{{ post.institution }}{% endif %}
-          {% if post.institution and post.location %} | {% endif %}
+        {% if post.venue or post.location %} | 
+          {% if post.venue %}{{ post.venue }}{% endif %}
+          {% if post.venue and post.location %} | {% endif %}
           {% if post.location %}{{ post.location }}{% endif %}
         {% endif %}
       </div>
