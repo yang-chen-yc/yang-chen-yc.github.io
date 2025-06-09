@@ -226,9 +226,7 @@ collections:
   conferences:
     output: true
     permalink: /:collection/:path/
-  courses:
-    output: true
-    permalink: /:collection/:path/
+
 
 
 # These settings control how pages and collections are included in the site
@@ -284,15 +282,6 @@ defaults:
       type: talks
     values:
       layout: talk
-      author_profile: true
-      share: true
-
-   # _courses
-  - scope:
-      path: ""
-      type: courses
-    values:
-      layout: courses
       author_profile: true
       share: true
 
