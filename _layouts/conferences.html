@@ -1,0 +1,21 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<div class="entries-list">
+  {% for post in site.conferences %}
+    <div class="conference-item">
+      <h3 class="conference-title">{{ post.title }}</h3>
+      <div class="conference-meta">
+        {{ post.conference }} | {{ post.date | date: "%B %Y" }} | {{ post.location }}
+      </div>
+      {% if post.excerpt %}
+        <div class="conference-excerpt">
+          {{ post.excerpt }}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
