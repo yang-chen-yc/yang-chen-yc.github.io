@@ -1,6 +1,5 @@
 ---
-# title: "The Economics of Digital Markets"                     # Conference name
-conference: "The Economics of Digital Markets"
+title: "The Economics of Digital Markets"                     # Conference name
 date_start: 2024-07-29                # First day (YYYY-MM-DD)
 date_end: 2024-08-02                  # Last day
 venue: "Study Center Gerzensee"       # Venue 
