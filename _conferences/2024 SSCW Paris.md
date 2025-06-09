@@ -1,6 +1,6 @@
 ---
-title: "SSCW 2024"                     # Conference name
-conference: "17th Meeting of the Society for Social Choice and Welfare"
+title: "SSCW 2024 | 17th Meeting of the Society for Social Choice and Welfare"                     # Conference name
+conference:
 date_start: 2024-07-03                # First day (YYYY-MM-DD)
 date_end: 2024-07-06                  # Last day
 venue: "Paris School of Economics"       # Venue 
