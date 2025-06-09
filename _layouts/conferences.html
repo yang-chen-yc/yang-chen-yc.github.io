@@ -4,6 +4,9 @@ layout: archive
 
 {{ content }}
 
+{% assign conferences_by_year = site.conferences | sort: "date_start" | reverse | group_by_exp: "post", "post.date_start | date: '%Y'" %}
+{% for year in conferences_by_year %}
+  <h2 class="conference-year">{{ year.name }}</h2>
 <div class="entries-list">
   {% for post in site.conferences %}
     <div class="conference-item">
