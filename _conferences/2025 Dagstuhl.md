@@ -6,5 +6,5 @@ date_end: 2025-02-14                  # Last day
 venue: "Leibniz-Zentrum für Informatik"       # Venue 
 location: "Dagstuhl, Germany"           # Location
 event_url: https://www.dagstuhl.de/25071                 # Official website
-event: "Conference"                   # Required for filtering
+type: "conference"                   # Required for filtering
 ---
