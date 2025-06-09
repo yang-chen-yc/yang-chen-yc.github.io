@@ -1,3 +1,14 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<!-- Group courses by year -->
+{% assign courses_by_year = site.courses | sort: "date_start" | reverse | group_by_exp: "post", "post.date_start | date: '%Y'" %}
+{% for year in courses_by_year %}
+  <h2 class="courses-year">{{ year.name }}</h2>
+
 <div class="course-item">
   <!-- Course Title (with optional hyperlink) -->
   <h3 class="course-title">
