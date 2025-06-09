@@ -1,1 +1,38 @@
+---
+layout: archive
+---
 
+{{ content }}
+
+<div class="research-list">
+  {% assign sorted_research = site.research | sort: "year" | reverse %}
+  {% for paper in sorted_research %}
+    <div class="research-item">
+      <!-- 1. Paper Title -->
+      <h3 class="research-title">
+        {% if paper.paper_url %}
+          <a href="{{ paper.paper_url }}" target="_blank">{{ paper.title }}</a>
+        {% else %}
+          {{ paper.title }}
+        {% endif %}
+      </h3>
+      
+      <!-- 2. Co-authors (only names, with links if available) -->
+      <div class="research-authors">
+        {% for author in paper.coauthors %}
+          {% if author.url %}
+            <a href="{{ author.url }}" target="_blank">{{ author.name }}</a>
+          {% else %}
+            {{ author.name }}
+          {% endif %}
+          {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+      
+      <!-- 3. Status in italics -->
+      {% if paper.status %}
+        <div class="research-status"><em>{{ paper.status }}</em></div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
