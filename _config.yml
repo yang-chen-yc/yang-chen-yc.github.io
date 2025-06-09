@@ -221,6 +221,9 @@ collections:
   courses:
     output: true
     permalink: /courses/:path/
+  research:
+    output: true
+    permalink: /research/:path/
 
 
 
