@@ -16,37 +16,31 @@ permalink: /teaching/
     {% for course in all_courses %}
       {% if course.type == type %}
         <div class="course-item">
+          <!-- Title + Level -->
           <h3 class="course-title">
-            {% if course.course_url %}
-              <a href="{{ course.course_url }}" target="_blank" rel="noopener noreferrer">{{ course.title }}</a>
-            {% else %}
-              {{ course.title }}
-            {% endif %}
-            {% if course.years %}
-              <span class="course-years">({{ course.years | join: ", " }})</span>
+            {{ course.title }}
+            {% if course.level %}
+              <span class="course-level">({{ course.level }})</span>
             {% endif %}
           </h3>
 
-          <!-- Instructor names (with optional links) -->
-          <div class="course-profs">
-            Instructor(s): 
-            {% if course.profs %}
-              {% for prof in course.profs %}
-                {% if prof.url %}
-                  <a href="{{ prof.url }}" target="_blank" rel="noopener noreferrer">{{ prof.name }}</a>
-                {% else %}
-                  {{ prof.name }}
-                {% endif %}
-                {% unless forloop.last %}, {% endunless %}
-              {% endfor %}
-            {% else %}
-              {{ course.prof | default: "Staff" }}
-            {% endif %}
+          <!-- Years (directly from YAML array) -->
+          <div class="course-years">
+            Years: {{ course.years | join: ", " }}
           </div>
 
-          {% if course.description %}
-            <div class="course-description">{{ course.description }}</div>
-          {% endif %}
+          <!-- Instructors -->
+          <div class="course-instructors">
+            Instructor{% if course.instructors.size > 1 %}s{% endif %}: 
+            {% for instructor in course.instructors %}
+              {% if instructor.url %}
+                <a href="{{ instructor.url }}" target="_blank" rel="noopener noreferrer">{{ instructor.name }}</a>
+              {% else %}
+                {{ instructor.name }}
+              {% endif %}
+              {% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </div>
         </div>
       {% endif %}
     {% endfor %}
