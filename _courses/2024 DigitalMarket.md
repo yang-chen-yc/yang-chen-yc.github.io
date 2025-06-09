@@ -4,7 +4,7 @@ date_start: 2024-07-29                # First day (YYYY-MM-DD)
 date_end: 2024-08-02                  # Last day
 profs:
   - name: "Alessandro Bonatti"
-    affiliation: "MIT Sloan"
+    affiliation: "MIT"
     url: "https://mitsloan.mit.edu/faculty/directory/alessandro-bonatti"
 venue: "Study Center Gerzensee"       # Venue 
 location: "Gerzensee, Switzerland"           # Location
