@@ -31,7 +31,7 @@ layout: archive
         {% if course.profs %}
           <div class="course-professors">
             Instructor(s): 
-            {% for professor in course.professors %}
+            {% for professor in course.profs %}
               {% if prof.url %}
                 <a href="{{ prof.url }}" target="_blank">{{ prof.name }}</a>
               {% else %}
