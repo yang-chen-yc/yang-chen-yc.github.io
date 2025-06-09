@@ -5,6 +5,6 @@ coauthors:
   - name: "Di FENG"
     url: https://dfengecon.github.io/
 type: "Working paper"  # e.g., Journal, Workshop, Preprint
-note: "Revision requested"  # Optional
+note: "Revision requested at Games and Economic Behavior"  # Optional
 # year: 2023
 ---
