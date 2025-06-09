@@ -5,6 +5,6 @@ date_start: 2024-07-29                # First day (YYYY-MM-DD)
 date_end: 2024-08-02                  # Last day
 venue: "Study Center Gerzensee"       # Venue 
 location: "Gerzensee, Switzerland"           # Location
-url: https://szgerzensee.ch/courses/advanced-courses-in-economics-for-doctoral-students-and-faculty-members/previous-years                # Official website
-# event: "Summer School"                   # Required for filtering
+event_url: https://szgerzensee.ch/courses/advanced-courses-in-economics-for-doctoral-students-and-faculty-members/previous-years                # Official website
+type: "summerschool"                   # Required for filtering
 ---
