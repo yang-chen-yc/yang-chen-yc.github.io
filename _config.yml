@@ -3,7 +3,7 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "About Me"
 title_separator          : "-"
-name                     : &name "Yang CHEN"
+name                     : "Yang CHEN"
 description              : "yangchen economics"
 url                      : "https://yang-chen-yc.github.io" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -12,16 +12,16 @@ repository               : "yang-chen-yc/yang-chen-yc.github.io"
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
-author: "Yang Chen"
+author:
   # Biographic information
-  avatar           : #"profile.png"
-  name             : "Yang CHEN"
-  pronouns         : #example: "she/her"  
-  bio              : "PhD student in Economics at HEC Lausanne, University of Lausanne."
-  location         : "Lausanne, Switzerland"
-  employer         : "HEC Lausanne, University of Lausanne"
-  uri              : # URL
-  email            : "yang.chen@unil.ch" 
+  avatar: #"profile.png"
+  name: "Yang CHEN"
+  pronouns: #example: "she/her"  
+  bio: "PhD student in Economics at HEC Lausanne, University of Lausanne."
+  location: "Lausanne, Switzerland"
+  employer: "HEC Lausanne, University of Lausanne"
+  uri: "https://yang-chen-yc.github.io"
+  email: "yang.chen@unil.ch"
 
   # Academic websites
   academia         : # URL
