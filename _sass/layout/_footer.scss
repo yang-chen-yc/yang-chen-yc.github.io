@@ -13,6 +13,7 @@
   margin-right: 0;
   width: 100%;
   clear: both;
+   line-height: 1;
 
   /* sticky footer fix start */
   position: absolute;
@@ -60,7 +61,7 @@
 
 .page__footer-copyright {
   font-family: $global-font-family;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .page__footer-follow {
@@ -75,7 +76,7 @@
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: $sans-serif-narrow;
-    font-size: 9px;
+    font-size: 8px;
     text-transform: uppercase;
   }
 
