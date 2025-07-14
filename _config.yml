@@ -20,15 +20,15 @@ author:
   bio: "PhD student in Economics at HEC Lausanne, University of Lausanne."
   location: "Lausanne, Switzerland"
   employer: "HEC Lausanne, University of Lausanne"
-  uri: "https://yang-chen-yc.github.io"
   email: "yang.chen@unil.ch"
+  orcid: "https://orcid.org/0009-0007-1342-7555"
+  #uri: "https://yang-chen-yc.github.io"
 
   # Academic websites
   academia: # URL
   arxiv: # URL - Update with the correct link to your profile
   googlescholar: #""
   impactstory: # URL
-  orcid: "https://orcid.org/0009-0007-1342-7555"
   semantic: # URL
   pubmed: #""
   researchgate: # URL
