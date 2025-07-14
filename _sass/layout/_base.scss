@@ -7,6 +7,20 @@ html {
   min-height: 100%;
 }
 
+/* Ensure sidebar and main content stay fixed */
+.sidebar {
+  position: fixed;      /* Lock sidebar in place */
+  width: 240px;         /* Set a fixed width */
+  height: 100vh;        /* Full viewport height */
+  padding-right: 20px;  /* Add gap between sidebar and main content */
+}
+
+.main {
+  margin-left: 260px;   /* Sidebar width + padding */
+  max-width: calc(100% - 260px); /* Prevent overflow */
+  padding: 20px;        /* Add internal padding */
+}
+
 body {
   /* Set via _themes.scss */
   color: var(--global-text-color);
