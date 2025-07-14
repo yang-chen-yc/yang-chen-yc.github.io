@@ -14,7 +14,7 @@ repository: "yang-chen-yc/yang-chen-yc.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar: #"profile.png"
+  avatar: "YC_PhotoCV.jpeg"
   name: "Yang CHEN"
   pronouns: #example: "she/her"  
   bio: "PhD student in Economics at HEC Lausanne, University of Lausanne."
